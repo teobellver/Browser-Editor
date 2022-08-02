@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Browser Editor</title>
+  <style>
+        #body{
+        background-color:black;
+    }
+    .archivo1{
+        position:absolute;
+        background-color:rgb(0,199,0);
+        right:20px;
+        /*height:0px;*/
+        top:20px;
+        padding:5px;
+    }
+    .archivo1:hover{
+        background-color:rgb(0, 128, 0);     
+    }
+    .command_prompt{
+        background-color: black;
+        border:white;
+        position:absolute;
+        right:100.4px;
+        top:95%;
+        width: 94%;
+        height: 40px;
+        color:rgb(0, 60, 0);
+        border: solid white ;
+        border-width: 1 0.5 1 1px;
+    }
+    .enter{
+        position:absolute;
+        top:95%;
+        width: 100px;
+        height: 50px;
+        color:rgb(0, 60, 0);
+        background-color: black;
+        right:0px;
+        border: solid white ;
+        border-width: 1 0.5 1 1px;
+        
+    }
+    .comando_descartable{
+        color:green;
+    }
+    
+    
+    </style>
+</head>
+<body id="body">
+
+    <script src="js/main.js"></script>
+    <button type="button" class="archivo1" onClick="displayQuery()">activar</button>
+    <form action="http://localhost/browser%20editor/main.html" id="cmd">
+        <input class="command_prompt" id="comando" value="comando" type="text">
+        <button class="enter" type="submit" value="submit">ENTER</button>
+
+    </form>
+    <p class="comando_descartable" id="comando_descartable"></p>
+</body>
